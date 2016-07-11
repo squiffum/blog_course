@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Blog</title>
+    <title>Carl Madsen - Part Designer, Part Developer</title>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://use.fontawesome.com/d5816683e2.js"></script>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +11,14 @@
   </head>
 
   <body>
+    <header id="main_navigation" class="clearfix">
+      <a href="#" class="name">Carl Madsen</a>
+      <nav>
+        <%= link_to "Articles", posts_path %>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
     <%= yield %>
   </body>
 </html>
