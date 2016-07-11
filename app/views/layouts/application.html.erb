@@ -12,13 +12,23 @@
 
   <body>
     <header id="main_navigation" class="clearfix">
-      <a href="#" class="name">Carl Madsen</a>
+      <%= link_to "Carl Madsen", root_path, class:"name" %>
       <nav>
         <%= link_to "Articles", posts_path %>
         <a href="#">Projects</a>
         <a href="#">Contact</a>
       </nav>
     </header>
+
     <%= yield %>
+
+    <footer id="main_footer">
+      <p class="copyright">&copy;2016 Carl Madsen</p>
+      <nav>
+        <a href="https://twitter.com/c_madsen07" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://dribbble.com/c_madsen07" target="_blank"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
+        <a href="https://github.com/squiffum" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+      </nav>
+    </footer>
   </body>
 </html>
