@@ -9,7 +9,6 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <header id="main_navigation" class="clearfix">
       <%= link_to "Carl Madsen", root_path, class:"name" %>
@@ -19,6 +18,12 @@
         <%= link_to "Contact", contacts_path, :method => :new %>
       </nav>
     </header>
+
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% elsif alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
 
     <%= yield %>
 
